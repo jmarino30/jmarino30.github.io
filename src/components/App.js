@@ -26,7 +26,7 @@ class App extends React.Component {
         const {weight, bodyFat, activity} = this.state;
         return (
             <div className="container">
-                <h1>Calorie Calculator</h1>
+                <h1 style={{textAlign:"center", margin:"20px 0 30px 0"}}>Calorie Calculator</h1>
                 <div className="row">
                     <div className="col-sm">
                         <WeightInput value={weight} onChange={this.handleWeightInput} />
