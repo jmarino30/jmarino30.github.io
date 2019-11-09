@@ -2,7 +2,7 @@
   "name": "cal-calc",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "http://jmarino30.github.io/jmarino30.github.io",
+  "homepage" : "https://jmarino30.github.io/",
   "dependencies": {
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
