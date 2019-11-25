@@ -44,9 +44,8 @@ class BodyResults extends React.Component {
         }
 
         return (
-            <div>
             <div className="row">
-                <div className="col-lg">
+                <div className="col-md-6">
             <TdeeModifier tdee={tdee} value={this.state.type} onSelect={this.handleSelect} onInput={this.handleInput} />
             <ul className="list-group list-group-flush">
                 <li className="list-group-item">
@@ -60,9 +59,8 @@ class BodyResults extends React.Component {
                 </li>
             </ul>
             </div>
-            <div className="col-lg">
+            <div className="col-md-6">
             <MacroSliders tdee={tdee} />
-            </div>
             </div>
             </div>
         );

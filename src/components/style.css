@@ -1,0 +1,32 @@
+@keyframes highlight {
+    from {
+        color: inherit;
+    }
+    to {
+        color: red; 
+    }
+  }
+.selected {
+    animation: highlight .5s ease-out forwards;
+}
+
+input[type=range][orient=vertical]
+{
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 8px;
+    height: 100px;
+    padding: 0 5px;
+    margin: 5px 0;
+}
+input[type=number] {
+    display: inline;
+}
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+.center-vert {
+    margin-top: auto;
+    margin-bottom: auto;
+}

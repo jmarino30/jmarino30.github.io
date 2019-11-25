@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 
 class ActivityInput extends React.Component {
 
@@ -19,13 +20,33 @@ class ActivityInput extends React.Component {
     }
     render() {
         return (
-            <div className="form-group ">
-                <label htmlFor="activity-level">Activity Level: {this.renderActivityInformation(this.props.activity)}</label>
-                <input 
-                    type="number" 
-                    className="form-control" 
-                    value={this.props.activity} 
-                    onChange={this.props.onChange} />
+            <div className="form-group">
+                <label htmlFor="activity-level">Activity Level: </label>
+                        <input 
+                            style={{display:"inline", marginBottom:"10px"}}
+                            type="number" 
+                            className="form-control" 
+                            value={this.props.activity} 
+                            onChange={this.props.onChange}
+                            step="0.1" />
+                    <div className="col-sm center-vert">
+                    <input style={{float:"left"}}
+                        type="range" 
+                        orient="vertical" 
+                        value={this.props.activity}
+                        min="1"
+                        max="1.95"
+                        step="0.05"
+                        onChange={this.props.onChange}
+                        />
+                        <ul style={{floar:"left"}} className="small center-vert">
+                            <li className={this.props.activity > 1.725 && this.props.activity <= 1.99 ? 'selected' : null}><strong>1.9 = Extremely Active</strong>{this.props.activity > 1.725 && this.props.activity <= 1.99 ? ': Very hard exercise 6 to 7 days per week & physical job' : null}</li>
+                            <li className={this.props.activity > 1.55 && this.props.activity <= 1.725 ? 'selected' : null}><strong>1.725 = Very Active</strong>{this.props.activity > 1.55 && this.props.activity <= 1.725 ? ': Hard exercise 6 to 7 days per week' : null}</li>
+                            <li className={this.props.activity > 1.375 && this.props.activity <= 1.55 ? 'selected' : null}><strong>1.55 = Moderately Active</strong>{this.props.activity > 1.375 && this.props.activity <= 1.55 ? ': Moderate exercise 3 to 5 days per week' : null}</li>
+                            <li className={this.props.activity > 1.2 && this.props.activity <= 1.375 ? 'selected' : null}><strong>1.375 = Lightly Active</strong>{this.props.activity > 1.2 && this.props.activity <= 1.375 ? ': Light exercise 1 to 3 days per week ' : null}</li>
+                            <li className={this.props.activity <= 1.2 ? 'selected' : null}><strong>1.2 = Sedentary</strong>{this.props.activity <= 1.2 ? ': Little or no exercise' : null}</li>
+                        </ul>
+                    </div>
             </div>
         );
     }

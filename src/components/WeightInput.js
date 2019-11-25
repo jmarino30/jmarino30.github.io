@@ -5,7 +5,7 @@ const WeightInput = props => {
         <div className="form-group col-xs-6">
             <label htmlFor="weight">Weight (lbs):</label>
             <input 
-                type="number" 
+                type="number" inputMode="numeric" pattern="[0-9]*"
                 className="form-control" 
                 value={props.value} 
                 onChange={props.onChange} />

@@ -10,7 +10,7 @@ const TdeeModifier = props => {
                 </select>
                 <span className="input-group-text rounded-left">{props.value === 'surplus' ? '+' : '-'}</span>
             </div>
-            <input onChange={props.onInput} type="number" className="form-control" aria-label="Surplus Deficit Amount" />
+            <input onChange={props.onInput} type="number" inputMode="numeric" pattern="[0-9]*" className="form-control" aria-label="Surplus Deficit Amount" />
             <div className="input-group-append">
                 <span className="input-group-text">%</span>
             </div>

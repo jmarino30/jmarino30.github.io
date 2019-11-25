@@ -10,7 +10,7 @@ class App extends React.Component {
         this.state = {
             weight:'',
             bodyFat:'',
-            activity:''
+            activity: 1
         }
     }
     handleWeightInput = event => {
@@ -25,17 +25,17 @@ class App extends React.Component {
     render() {
         const {weight, bodyFat, activity} = this.state;
         return (
-            <div className="container">
+            <div className="container" style={{maxWidth:"800px"}}>
                 <h1 style={{textAlign:"center", margin:"20px 0 30px 0"}}>Calorie Calculator</h1>
                 <div className="row">
-                    <div className="col-sm">
+                    <div className="col-sm-6">
                         <WeightInput value={weight} onChange={this.handleWeightInput} />
-                    </div>
-                    <div className="col-sm">
                         <BodyFatInput value={bodyFat} onChange={this.handleBodyFatInput} />
                     </div>
-                </div>
-                    <ActivityInput activity={activity} onChange={this.handleActivityInput} />
+                    <div className="col-sm-6 center-vert">
+                        <ActivityInput activity={activity} onChange={this.handleActivityInput} />
+                    </div>
+                    </div>
                     <BodyResults weight={weight} bodyFat={bodyFat} activity={activity} />
             </div>
         );
@@ -43,3 +43,8 @@ class App extends React.Component {
 }
 
 export default App;
+
+//fix number inputs mobile keyboards
+//fix carbs slider from moving on mobile
+
+// fix entire layout, make inputs much smaller, use bootstrap grid better

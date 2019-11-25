@@ -42,7 +42,7 @@ class MacroSliders extends React.Component {
         return (
             <div className={classes}>
                 <label htmlFor="formControlRange">
-                    Carbohydrates <strong>{carbs ? `${carbs}g (${carbsPercentage}%)` : '0g'}</strong>
+                    Carbs <strong>{carbs ? `${carbs}g (${carbsPercentage}%)` : '0g'}</strong>
                     {warning ? <small> *Recommended between 30-55%</small> : ''}
             </label>
             <input 
