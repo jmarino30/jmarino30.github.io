@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/calorie-calc/precache-manifest.00271507fd8037687d2cf6ac43c9b81c.js"
+  "/calorie-calc/precache-manifest.f7179106d99f8583aba69395490b81da.js"
 );
 
 self.addEventListener('message', (event) => {
