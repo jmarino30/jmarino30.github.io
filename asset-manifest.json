@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/calorie-calc/static/css/main.244913ab.chunk.css",
-    "main.js": "/calorie-calc/static/js/main.3edd922a.chunk.js",
-    "main.js.map": "/calorie-calc/static/js/main.3edd922a.chunk.js.map",
+    "main.js": "/calorie-calc/static/js/main.a35fc1f6.chunk.js",
+    "main.js.map": "/calorie-calc/static/js/main.a35fc1f6.chunk.js.map",
     "runtime-main.js": "/calorie-calc/static/js/runtime-main.d6b27eea.js",
     "runtime-main.js.map": "/calorie-calc/static/js/runtime-main.d6b27eea.js.map",
     "static/js/2.b33c12be.chunk.js": "/calorie-calc/static/js/2.b33c12be.chunk.js",
     "static/js/2.b33c12be.chunk.js.map": "/calorie-calc/static/js/2.b33c12be.chunk.js.map",
     "index.html": "/calorie-calc/index.html",
-    "precache-manifest.90d7b7ae2e93d1551ac21621c93ad266.js": "/calorie-calc/precache-manifest.90d7b7ae2e93d1551ac21621c93ad266.js",
+    "precache-manifest.1f69b7b7e41427d5d3146237de33b894.js": "/calorie-calc/precache-manifest.1f69b7b7e41427d5d3146237de33b894.js",
     "service-worker.js": "/calorie-calc/service-worker.js",
     "static/css/main.244913ab.chunk.css.map": "/calorie-calc/static/css/main.244913ab.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.d6b27eea.js",
     "static/js/2.b33c12be.chunk.js",
     "static/css/main.244913ab.chunk.css",
-    "static/js/main.3edd922a.chunk.js"
+    "static/js/main.a35fc1f6.chunk.js"
   ]
 }
