@@ -1,2 +1,0 @@
-@-webkit-keyframes highlight{0%{color:inherit}to{color:red}}@keyframes highlight{0%{color:inherit}to{color:red}}.selected{-webkit-animation:highlight .5s ease-out forwards;animation:highlight .5s ease-out forwards}input[type=range][orient=vertical]{-webkit-writing-mode:bt-lr;-ms-writing-mode:bt-lr;writing-mode:bt-lr;-webkit-appearance:slider-vertical;width:8px;height:100px;padding:0 5px}ul{list-style-type:none;padding-left:20px}.center-vert{margin-top:auto;margin-bottom:auto}.alert{margin:5px}
-/*# sourceMappingURL=main.f1033d45.chunk.css.map */
