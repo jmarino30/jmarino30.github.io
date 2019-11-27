@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9fcc607a13e324bd8199c8923420dbce",
+    "revision": "5a0cd299ad85ce1568c0d529df9a5810",
     "url": "/calorie-calc/index.html"
   },
   {
-    "revision": "c289e91018ca30280fd6",
-    "url": "/calorie-calc/static/css/main.244913ab.chunk.css"
+    "revision": "7d9d707ae24fe9f2e28b",
+    "url": "/calorie-calc/static/css/main.f1033d45.chunk.css"
   },
   {
     "revision": "086c0d8ba6ff9a020e5b",
     "url": "/calorie-calc/static/js/2.b33c12be.chunk.js"
   },
   {
-    "revision": "c289e91018ca30280fd6",
-    "url": "/calorie-calc/static/js/main.a35fc1f6.chunk.js"
+    "revision": "7d9d707ae24fe9f2e28b",
+    "url": "/calorie-calc/static/js/main.1ebecf40.chunk.js"
   },
   {
     "revision": "6ff7f66fe62cd9069da3",
