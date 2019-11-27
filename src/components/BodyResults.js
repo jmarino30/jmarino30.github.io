@@ -4,7 +4,7 @@ import MacroSliders from './MacroSliders';
 
 class BodyResults extends React.Component {
     state = {
-        type: 'surplus',
+        type: 'none',
         modifier: ''
     }
     handleSelect = event => {
@@ -12,6 +12,9 @@ class BodyResults extends React.Component {
             this.setState({ type: 'surplus' });
         } else if (event.target.value === 'deficit') {
             this.setState({ type: 'deficit' })
+        } else if (event.target.value === 'none') {
+            this.setState({ type: 'none' });
+            this.setState({ modifier: '' });
         }
     }
     handleInput = event => {
@@ -46,23 +49,23 @@ class BodyResults extends React.Component {
         return (
             <div className="row">
                 <div className="col-md-6">
-            <TdeeModifier tdee={tdee} value={this.state.type} onSelect={this.handleSelect} onInput={this.handleInput} />
-            <ul className="list-group list-group-flush">
-                <li className="list-group-item">
-                LBM: <strong>{lbm ? `${parseInt(lbm)} lbs` : ''}</strong>
-                </li>
-                <li className="list-group-item">
-                BMR: <strong>{bmr ? `${parseInt(bmr)} cals` : ''}</strong>
-                </li>
-                <li className="list-group-item">
-                TDEE: <strong>{tdee ? `${parseInt(tdee)} cals` : ''}</strong>
-                </li>
-            </ul>
-            </div>
+                    <TdeeModifier tdee={tdee} value={this.state.type} onSelect={this.handleSelect} onInput={this.handleInput} />
+                    <ul className="list-group list-group-flush">
+                        <li className="list-group-item">
+                        LBM: <strong>{lbm ? `${parseInt(lbm)} lbs` : ''}</strong>
+                        </li>
+                        <li className="list-group-item">
+                        BMR: <strong>{bmr ? `${parseInt(bmr)} cals` : ''}</strong>
+                        </li>
+                        <li className="list-group-item">
+                        TDEE: <strong style={{color:"red"}}>{tdee ? `${parseInt(tdee)} cals` : ''}</strong>
+                        </li>
+                    </ul>
+                </div>
             <div className="col-md-6">
-            <MacroSliders tdee={tdee} />
+                <MacroSliders tdee={tdee} />
             </div>
-            </div>
+        </div>
         );
     }
 }

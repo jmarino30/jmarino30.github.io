@@ -35,8 +35,8 @@ class App extends React.Component {
                     <div className="col-sm-6 center-vert">
                         <ActivityInput activity={activity} onChange={this.handleActivityInput} />
                     </div>
-                    </div>
-                    <BodyResults weight={weight} bodyFat={bodyFat} activity={activity} />
+                </div>
+                <BodyResults weight={weight} bodyFat={bodyFat} activity={activity} />
             </div>
         );
     }

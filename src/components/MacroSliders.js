@@ -5,7 +5,15 @@ class MacroSliders extends React.Component {
     state = {
         carbsPercentage: 35,
         fatPercentage: 30,
-        proteinPercentage: 35
+        proteinPercentage: 35,
+        width: 0
+    }
+    componentDidMount() {
+        this.setWindowWidth();
+        window.addEventListener('resize', this.setWindowWidth);
+    }
+    setWindowWidth = () => {
+        this.setState({width: window.innerWidth}) 
     }
     renderProteinSlider = (protein, proteinPercentage) => {
         let classes = "form-group alert";
@@ -19,7 +27,7 @@ class MacroSliders extends React.Component {
                 <label htmlFor="formControlRange">
                     Protein <strong>{protein ? `${protein}g (${proteinPercentage}%)` : '0g'}
                     </strong>
-                    {warning ? <small> *Recommended between 30-55%</small> : ''}
+                    {warning ? <small>{this.state.width > 400 ? ' *Recommended' : ' *Rec.'} 30-55%</small> : ''}
             </label>
             <input 
                 min="0" 
@@ -43,7 +51,7 @@ class MacroSliders extends React.Component {
             <div className={classes}>
                 <label htmlFor="formControlRange">
                     Carbs <strong>{carbs ? `${carbs}g (${carbsPercentage}%)` : '0g'}</strong>
-                    {warning ? <small> *Recommended between 30-55%</small> : ''}
+                    {warning ? <small>{this.state.width > 400 ? ' *Recommended' : ' *Rec.'} 30-55%</small> : ''}
             </label>
             <input 
                 min="0" 
@@ -67,7 +75,7 @@ class MacroSliders extends React.Component {
             <div className={classes}>
                 <label  htmlFor="formControlRange">
                     Fat <strong>{fat ? `${fat}g (${fatPercentage}%)` : '0g'}</strong>
-                    {warning ? <small> *Recommended between 10-35%</small> : ''}
+                    {warning ? <small>{this.state.width > 400 ? ' *Recommended' : ' *Rec.'} 10-35%</small> : ''}
             </label>
             <input 
                 min="0" 
@@ -108,6 +116,7 @@ class MacroSliders extends React.Component {
         const fat = this.props.tdee * (this.state.fatPercentage/100) / 9;
         const carbs = this.props.tdee * (this.state.carbsPercentage/100) / 4;
         const protein = this.props.tdee * (this.state.proteinPercentage/100) / 4;
+        console.log('state', this.state.width)
         return (
             <div>
                 {this.renderFatSlider(parseInt(fat), this.state.fatPercentage)}
